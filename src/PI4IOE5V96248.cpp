@@ -88,7 +88,7 @@ byte PI4IOE5V96248::readPort(byte port) {
 // read all values
 byte * PI4IOE5V96248::readAll() {
   byte count = 0;
-  Wire.requestFrom(deviceAddress, 6);
+  Wire.requestFrom(deviceAddress, (uint8_t)6);
   while (Wire.available())
   {
     read_io[count] = Wire.read();
