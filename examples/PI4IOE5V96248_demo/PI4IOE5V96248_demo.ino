@@ -34,7 +34,7 @@ void setup() {
 
 //Convinience function to print values
 void printout() {
-  byte * stored = io_exp.returnValue();
+  byte * stored = io_exp.readAll();
   for (int i = 0; i < 6; i++) { //example printing initialized 0xFF(all on) values
     Serial.print("  [");
     Serial.print(i);
