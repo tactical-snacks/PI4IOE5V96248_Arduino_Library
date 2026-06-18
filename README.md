@@ -20,7 +20,7 @@ All rights reserved by Blueprint Foundry.
 ## Changes from Upstream
 
 ### Added
-- extended pin mapping
+- extended pin mapping for pin read and write
 - i2c address table
 
 ### Fixed

@@ -28,6 +28,7 @@ class PI4IOE5V96248
     void writePort(byte port, byte portValue);
     void writeAll(byte highLow[6]);
     byte readPin(byte port, byte pin);
+    byte readPin(byte pin48);
     byte readPort(byte port);
     byte * readAll();
     byte * returnValue();

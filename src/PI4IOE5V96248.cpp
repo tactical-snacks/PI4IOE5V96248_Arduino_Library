@@ -79,6 +79,13 @@ byte PI4IOE5V96248::readPin(byte port, byte pin) {
   return bitRead(readPort(port), pin);
 }
 
+// reads pin value, and returns pin read value, requires extended pin number (0-47)
+byte PI4IOE5V96248::readPin(byte pin48) {
+  byte port = pin48 / 8;
+  byte bit  = pin48 % 8;
+  return bitRead(readPort(port), bit);
+}
+
 //Sets a specific port, reads values
 byte PI4IOE5V96248::readPort(byte port) {
   byte * retVal = readAll();
