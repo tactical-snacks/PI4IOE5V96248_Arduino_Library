@@ -41,7 +41,7 @@ void PI4IOE5V96248::writePin(byte port, byte pin, byte highLow)
 }
 
 //sets a single pin on the chip, requires extended pin number (0-47) and value to set
-void PI4IOE5V96248::writePin48(byte pin48, byte highLow)
+void PI4IOE5V96248::writePin(byte pin48, byte highLow)
 {
   byte port = pin48 / 8;
   byte bit  = pin48 % 8;
