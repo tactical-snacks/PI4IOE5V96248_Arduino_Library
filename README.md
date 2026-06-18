@@ -24,6 +24,7 @@ All rights reserved by Blueprint Foundry.
 
 ### Fixed
 - readAll compiler warning
+- readAll in demo
 
 ### Changed
 - Corrected README input read documentation
