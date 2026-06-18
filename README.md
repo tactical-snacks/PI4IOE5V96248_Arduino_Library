@@ -21,3 +21,4 @@ All rights reserved by Blueprint Foundry.
 
 ### Added
 - extended pin mapping
+- i2c address table
