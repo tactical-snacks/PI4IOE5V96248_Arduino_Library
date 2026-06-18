@@ -40,6 +40,16 @@ void PI4IOE5V96248::writePin(byte port, byte pin, byte highLow)
   writePort(port, value[port]);
 }
 
+//sets a single pin on the chip, requires extended pin number (0-47) and value to set
+void PI4IOE5V96248::writePin48(byte pin48, byte highLow)
+{
+  byte port = pin48 / 8;
+  byte bit  = pin48 % 8;
+  if (highLow == HIGH) value[port] |= 1UL << bit;
+  else value[port] &= ~(1UL << bit);
+  writePort(port, value[port]);
+}
+
 //Sets an entire port at once, usually the fastest way to set values for this chip
 //Note: Port outputs are changed as soon as write is done for each port.
 void PI4IOE5V96248::writePort(byte port, byte portValue)

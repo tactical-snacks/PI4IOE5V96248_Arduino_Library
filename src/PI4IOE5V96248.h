@@ -24,6 +24,7 @@ class PI4IOE5V96248
     PI4IOE5V96248();
     byte begin(byte address = 0x23); // Example PI4IOE5V96248 I2C address, depends on setting for AD0, AD1, AD2
     void writePin(byte port, byte pin, byte highLow);
+    void writePin48(byte pin48, byte highLow);
     void writePort(byte port, byte portValue);
     void writeAll(byte highLow[6]);
     byte readPin(byte port, byte pin);
